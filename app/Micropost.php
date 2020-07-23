@@ -15,16 +15,5 @@ class Micropost extends Model
     {
         return $this->belongsTo(User::class);
     }
-    
-    public function microposts()
-    {
-        return $this->hasMany(Micropost::class);
-    
-    }
-    
-    public function loadRelationshipCounts()
-    {
-        $this->loadCount('microposts');
-    }
-
+   
 }
